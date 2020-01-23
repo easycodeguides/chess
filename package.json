@@ -1,0 +1,31 @@
+{
+  "name": "chess-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.0",
+    "lint-staged": "^10.0.2",
+    "prettier": "^1.19.1",
+    "prettier-standard": "^16.1.0",
+    "styled-components": "^5.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easycodeguides/chess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easycodeguides/chess/issues"
+  },
+  "homepage": "https://github.com/easycodeguides/chess#readme"
+}
