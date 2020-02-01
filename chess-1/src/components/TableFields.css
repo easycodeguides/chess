@@ -1,0 +1,27 @@
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.flexChild {
+    box-sizing: border-box;
+    background-color: #fff;
+    flex: 0 0 12.5%;
+    height: 12.5vh;
+    border: 1px solid #282c34;
+}
+
+
+
+.flexChild:nth-child(-2n+8),
+.flexChild:nth-child(8) ~ .flexChild:nth-child(-2n+15),
+.flexChild:nth-child(16) ~ .flexChild:nth-child(-2n+24),
+.flexChild:nth-child(24) ~ .flexChild:nth-child(-2n+31),
+.flexChild:nth-child(32) ~ .flexChild:nth-child(-2n+40),
+.flexChild:nth-child(40) ~ .flexChild:nth-child(-2n+47),
+.flexChild:nth-child(48) ~ .flexChild:nth-child(-2n+56),
+.flexChild:nth-child(56) ~ .flexChild:nth-child(-2n+63) {
+    background-color: #000;
+}

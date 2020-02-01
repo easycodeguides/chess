@@ -5,7 +5,6 @@ import Table from './components/Table'
 
 class App extends React.Component {
   render () {
-    //console.log(this.props.lego)
     return (
         <Table />
     );
