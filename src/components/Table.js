@@ -4,22 +4,22 @@ import TableFields from './TableFields';
 class Table extends React.Component {
     state = {
         fields: [
-            { id: 0, x: '1', y: '1', piece: '♖' },
-            { id: 1, x: '2', y: '1', piece: '♘' },
-            { id: 2, x: '3', y: '1', piece: '♗' },
-            { id: 3, x: '4', y: '1', piece: '♔' },
-            { id: 4, x: '5', y: '1', piece: '♕' },
-            { id: 5, x: '6', y: '1', piece: '♗' },
-            { id: 6, x: '7', y: '1', piece: '♘' },
-            { id: 7, x: '8', y: '1', piece: '♖' },
-            { id: 8, x: '1', y: '2', piece: '♙' },
-            { id: 9, x: '2', y: '2', piece: '♙' },
-            { id: 10, x: '3', y: '2', piece: '♙' },
-            { id: 11, x: '4', y: '2', piece: '♙' },
-            { id: 12, x: '5', y: '2', piece: '♙' },
-            { id: 13, x: '6', y: '2', piece: '♙' },
-            { id: 14, x: '7', y: '2', piece: '♙' },
-            { id: 15, x: '8', y: '2', piece: '♙' },
+            { id: 0, x: '1', y: '1', piece: 'R' },
+            { id: 1, x: '2', y: '1', piece: 'N' },
+            { id: 2, x: '3', y: '1', piece: 'B' },
+            { id: 3, x: '4', y: '1', piece: 'K' },
+            { id: 4, x: '5', y: '1', piece: 'Q' },
+            { id: 5, x: '6', y: '1', piece: 'B' },
+            { id: 6, x: '7', y: '1', piece: 'N' },
+            { id: 7, x: '8', y: '1', piece: 'R' },
+            { id: 8, x: '1', y: '2', piece: 'P' },
+            { id: 9, x: '2', y: '2', piece: 'P' },
+            { id: 10, x: '3', y: '2', piece: 'P' },
+            { id: 11, x: '4', y: '2', piece: 'P' },
+            { id: 12, x: '5', y: '2', piece: 'P' },
+            { id: 13, x: '6', y: '2', piece: 'P' },
+            { id: 14, x: '7', y: '2', piece: 'P' },
+            { id: 15, x: '8', y: '2', piece: 'P' },
             { id: 16, x: '1', y: '3', piece: '' },
             { id: 17, x: '2', y: '3', piece: '' },
             { id: 18, x: '3', y: '3', piece: '' },
@@ -52,31 +52,32 @@ class Table extends React.Component {
             { id: 45, x: '6', y: '6', piece: '' },
             { id: 46, x: '7', y: '6', piece: '' },
             { id: 47, x: '8', y: '6', piece: '' },
-            { id: 48, x: '1', y: '7', piece: '♟' },
-            { id: 49, x: '2', y: '7', piece: '♟' },
-            { id: 50, x: '3', y: '7', piece: '♟' },
-            { id: 51, x: '4', y: '7', piece: '♟' },
-            { id: 52, x: '5', y: '7', piece: '♟' },
-            { id: 53, x: '6', y: '7', piece: '♟' },
-            { id: 54, x: '7', y: '7', piece: '♟' },
-            { id: 55, x: '8', y: '7', piece: '♟' },
-            { id: 56, x: '1', y: '8', piece: '♜' },
-            { id: 57, x: '2', y: '8', piece: '♞' },
-            { id: 58, x: '3', y: '8', piece: '♝' },
-            { id: 59, x: '4', y: '8', piece: '♚' },
-            { id: 60, x: '5', y: '8', piece: '♛' },
-            { id: 61, x: '6', y: '8', piece: '♝' },
-            { id: 62, x: '7', y: '8', piece: '♞' },
-            { id: 63, x: '8', y: '8', piece: '♜' }
+            { id: 48, x: '1', y: '7', piece: 'p' },
+            { id: 49, x: '2', y: '7', piece: 'p' },
+            { id: 50, x: '3', y: '7', piece: 'p' },
+            { id: 51, x: '4', y: '7', piece: 'p' },
+            { id: 52, x: '5', y: '7', piece: 'p' },
+            { id: 53, x: '6', y: '7', piece: 'p' },
+            { id: 54, x: '7', y: '7', piece: 'p' },
+            { id: 55, x: '8', y: '7', piece: 'p' },
+            { id: 56, x: '1', y: '8', piece: 'r' },
+            { id: 57, x: '2', y: '8', piece: 'n' },
+            { id: 58, x: '3', y: '8', piece: 'b' },
+            { id: 59, x: '4', y: '8', piece: 'k' },
+            { id: 60, x: '5', y: '8', piece: 'q' },
+            { id: 61, x: '6', y: '8', piece: 'b' },
+            { id: 62, x: '7', y: '8', piece: 'n' },
+            { id: 63, x: '8', y: '8', piece: 'r' }
         ]
-    }
+    };
 
     render() {
         return (
-            <TableFields fields={this.state.fields} />
+            <TableFields fields={this.state.fields} piece={pieceImages} />
         );
     }
 }
 
+const pieceImages={ P:'♙',R:'♖',N:'♘',B:'♗',Q:'♕',K:'♔', p:'♟',r:'♜',n:'♞',b:'♝',q:'♛',k:'♚'};
 
 export default Table;
