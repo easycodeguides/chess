@@ -25,4 +25,6 @@
 .flexChild:nth-child(48) ~ .flexChild:nth-child(-2n+56),
 .flexChild:nth-child(56) ~ .flexChild:nth-child(-2n+63) {
     background-color: #000;
+    color:white;
+
 }

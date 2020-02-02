@@ -10,11 +10,9 @@ class TableFields extends React.Component {
             <div className="flexChild" key={chessField.id}>{chessField.piece}</div>));
 
         return (
-            /*<div style={{height:'800px', width:'800px'}}>*/
             <div className="flexContainer">
                 {draw}
             </div>
-            /*</div>*/
         );
     }
 }
