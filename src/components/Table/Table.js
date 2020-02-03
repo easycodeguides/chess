@@ -1,5 +1,6 @@
 import React from 'react';
-import TableFields from './TableFields';
+import Field from '../Field';
+import './Table.css';
 
 class Table extends React.Component {
     state = {
@@ -73,7 +74,7 @@ class Table extends React.Component {
 
     render() {
         return (
-            <TableFields fields={this.state.fields} piece={pieceImages} />
+            <Field fields={this.state.fields} piece={pieceImages} />
         );
     }
 }
