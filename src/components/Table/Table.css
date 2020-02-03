@@ -1,0 +1,30 @@
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+
+.flexChild {
+    box-sizing: border-box;
+    background-color: #e2b87e;
+    flex: 0 0 12.5%;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.flexChild:nth-child(-2n+8),
+.flexChild:nth-child(8) ~ .flexChild:nth-child(-2n+15),
+.flexChild:nth-child(16) ~ .flexChild:nth-child(-2n+24),
+.flexChild:nth-child(24) ~ .flexChild:nth-child(-2n+31),
+.flexChild:nth-child(32) ~ .flexChild:nth-child(-2n+40),
+.flexChild:nth-child(40) ~ .flexChild:nth-child(-2n+47),
+.flexChild:nth-child(48) ~ .flexChild:nth-child(-2n+56),
+.flexChild:nth-child(56) ~ .flexChild:nth-child(-2n+63) {
+    background-color: #8f5736;
+}

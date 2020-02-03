@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TableFields extends React.Component {
+class Field extends React.Component {
     getStyle = (piece) => {
         return {
             color: piece === piece.toLowerCase()? 'black':'white'
@@ -19,4 +19,4 @@ class TableFields extends React.Component {
     }
 }
 
-export default TableFields;
+export default Field;
