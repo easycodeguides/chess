@@ -1,4 +1,5 @@
-export const fenToArray = fenValue => {
+export const fenToArray = (fenValue, fields) => {
+
     let fenArray = [];
     fenValue.split('').forEach( element => {
         if (Number.isInteger(parseInt(element))) {
@@ -9,7 +10,12 @@ export const fenToArray = fenValue => {
             fenArray.push(element)
         }
     });
+
     return fenArray
         .filter(piece => piece !== '/')
-        .map( field => ({id:'', x:'', y:'', piece:field}));
+        .map( (field, index) => ({
+            id:index,
+            x:fields[index].x,
+            y:fields[index].y,
+            piece:field}));
 };
