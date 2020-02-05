@@ -15,7 +15,7 @@ export const fenToArray = fenValue => {
         .filter(piece => piece !== '/')
         .map( (field, index) => ({
             id:index,
-            x:(63-index)%8+1,
-            y:Math.ceil((64-index)/8),
+            x:index%8+1,
+            y:Math.ceil((index+1 )/8),
             piece:field}));
 };

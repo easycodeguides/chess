@@ -15,7 +15,7 @@ class Field extends React.Component {
         const draw = this.props.fields.reverse().map((chessField) => (
             <div className="flexChild" style={this.getStyle(chessField.piece)} key={chessField.id}>{this.props.piece[chessField.piece]}</div>));
         // FEN to Array TEST
-        console.log(fenToArray(fen));
+        console.log(fenToArray(fen))
         return (
             <div className="flexContainer">
                 {draw}
