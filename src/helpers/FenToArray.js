@@ -1,4 +1,4 @@
-export const fenToArray = (fenValue, fields) => {
+export const fenToArray = fenValue => {
 
     let fenArray = [];
     fenValue.split('').forEach( element => {
@@ -15,7 +15,7 @@ export const fenToArray = (fenValue, fields) => {
         .filter(piece => piece !== '/')
         .map( (field, index) => ({
             id:index,
-            x:fields[index].x,
-            y:fields[index].y,
+            x:(63-index)%8+1,
+            y:Math.ceil((64-index)/8),
             piece:field}));
 };
