@@ -8,16 +8,9 @@ class Field extends React.Component {
     }
 
 
-    fenNotation = () => {
-        
-        var positions = [];
-     
-        this.props.fields.map((field) => (
-            positions.push(field.piece)
-        ))
-        
-        var rows = [];
-        var counter = 0;
+    fenNotation = fields => {       
+        var positions = fields.map( field => field.piece );       
+        var rows = [], counter = 0;
 
         for(var i = 0; i < 8; i++){
             rows[i] = [];
@@ -26,29 +19,23 @@ class Field extends React.Component {
                 rows[i][j] = positions[counter];
                 counter++;
             }
-            
         }
 
         var allshortArrays = '';
 
-        rows.forEach( (row, index) => {
-            
-            const shortArray = []; 
-            var emptyCounter = 1; 
+        rows.forEach( (row, index) => {        
+            var shortArray = [], emptyCounter = 1; 
 
-            for(let l = 0; l < 8; l++){
+            for(var l = 0; l < 8; l++){
 
-                if(row[l] !== ''){
-            
+                if(row[l] !== ''){            
                     shortArray.push(row[l]);
-            
                 } else {
-                
-                    if(row[l + 1] ===''){
+                    if(row[l + 1] === ''){
                         emptyCounter++; 
-                        
                     } else {
                         shortArray.push(emptyCounter);
+                        emptyCounter = 1;
                     }
                 }
             }
@@ -57,19 +44,17 @@ class Field extends React.Component {
                 allshortArrays += shortArray.join('') + "/";
             } else {
                 allshortArrays += shortArray.join('');
-            }
-        
-        });
-
-        console.log('Fen notation of the start position', allshortArrays);
-    
+            }   
+        });     
+        return allshortArrays;
     }
 
     render() {
         const draw = this.props.fields.reverse().map((chessField) => (
             <div className="flexChild" style={this.getStyle(chessField.piece)} key={chessField.id}>{this.props.piece[chessField.piece]}</div>));
 
-        this.fenNotation();
+        var fenFields = this.fenNotation(this.props.fields);
+        console.log('Fen notation is ',fenFields);
 
         return (
             <div className="flexContainer">
