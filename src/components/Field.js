@@ -9,24 +9,26 @@ class Field extends React.Component {
 
 
     fenNotation = fields => {       
-        var positions = fields.map( field => field.piece );       
-        var rows = [], counter = 0;
+        var positions = fields.map( field => field.piece ), 
+            counter = 0,
+            rows = [];       
 
-        for(var i = 0; i < 8; i++){
+        for(let i = 0; i < 8; i++){
             rows[i] = [];
 
-            for(var j = 0; j < 8; j++){
+            for(let j = 0; j < 8; j++){
                 rows[i][j] = positions[counter];
                 counter++;
             }
         }
 
-        var allshortArrays = '';
+        let allshortArrays = '';
 
         rows.forEach( (row, index) => {        
-            var shortArray = [], emptyCounter = 1; 
+            const shortArray = [];
+            let emptyCounter = 1; 
 
-            for(var l = 0; l < 8; l++){
+            for(let l = 0; l < 8; l++){
 
                 if(row[l] !== ''){            
                     shortArray.push(row[l]);
