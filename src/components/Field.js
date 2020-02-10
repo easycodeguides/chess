@@ -13,7 +13,7 @@ class Field extends React.Component {
 
 
     fenNotation = fields => {       
-        var positions = fields.map( field => field.piece ), 
+        let positions = fields.map( field => field.piece ), 
             counter = 0,
             rows = [];       
 
