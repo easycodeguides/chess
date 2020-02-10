@@ -2,7 +2,7 @@ import React from 'react';
 import {fenToArray} from '../helpers/FenToArray'
 
 // FEN primer
-const fen = '3K4/8/8/8/8/8/8/3k4';
+const fen = '3k3r/8/8/8/8/8/8/3K1N2';
 
 class Field extends React.Component {
     getStyle = (piece) => {
