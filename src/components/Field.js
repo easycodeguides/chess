@@ -1,6 +1,6 @@
 import React from 'react';
 import {fenToArray} from '../helpers/FenToArray'
-import { fenNotation } from "../helpers/ArrayToFen";
+import { arrayToFen } from "../helpers/ArrayToFen";
 
 // FEN primer
 const fen = '3k3r/8/8/8/8/8/8/3K1N2';
@@ -18,7 +18,7 @@ class Field extends React.Component {
         // FEN to Array TEST
         console.log(fenToArray(fen))
             
-        console.log(fenNotation(this.props.fields));
+        console.log(arrayToFen(this.props.fields));
 
         return (
             <div className="flexContainer">

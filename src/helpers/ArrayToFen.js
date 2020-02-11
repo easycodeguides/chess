@@ -1,4 +1,4 @@
-export const fenNotation = fields => {       
+export const arrayToFen = fields => {       
     
     let positions = fields.map( field => field.piece ), 
         counter = 0,
