@@ -1,2 +1,1 @@
-export const move = (move, position) => 
-    (move && position)
+export const move = (move, position) => ""
