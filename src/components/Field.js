@@ -27,7 +27,11 @@ class Field extends React.Component {
         console.log(move1);
         const move2 = move('e6','rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR');
         console.log(move2);
-
+        const move3 = move('Nc3','rnbqkbnr/pppp1ppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR');
+        console.log(move3);
+        const move4 = move('na6','rnbqkbnr/pppp1ppp/4p3/8/4P3/2N5/PPPP1PPP/R1BQKBNR');
+        console.log(move4);
+      
         return (
             <div className="flexContainer">
                 {draw}
