@@ -2,11 +2,11 @@ import React from 'react';
 import {fenToArray} from './FenToArray';
 
 const fieldsE1 = [
-    { id: 0, x: 1, y: 1, piece: 'R' },
+    { id: 0, x: 1, y: 1, piece: '' },
     { id: 1, x: 2, y: 1, piece: 'N' },
     { id: 2, x: 3, y: 1, piece: 'B' },
-    { id: 3, x: 4, y: 1, piece: 'K' },
-    { id: 4, x: 5, y: 1, piece: 'Q' },
+    { id: 3, x: 4, y: 1, piece: 'Q' },
+    { id: 4, x: 5, y: 1, piece: 'K' },
     { id: 5, x: 6, y: 1, piece: 'B' },
     { id: 6, x: 7, y: 1, piece: 'N' },
     { id: 7, x: 8, y: 1, piece: 'R' },
@@ -58,11 +58,11 @@ const fieldsE1 = [
     { id: 53, x: 6, y: 7, piece: 'p' },
     { id: 54, x: 7, y: 7, piece: 'p' },
     { id: 55, x: 8, y: 7, piece: 'p' },
-    { id: 56, x: 1, y: 8, piece: 'r' },
+    { id: 56, x: 1, y: 8, piece: '' },
     { id: 57, x: 2, y: 8, piece: 'n' },
     { id: 58, x: 3, y: 8, piece: 'b' },
-    { id: 59, x: 4, y: 8, piece: 'k' },
-    { id: 60, x: 5, y: 8, piece: 'q' },
+    { id: 59, x: 4, y: 8, piece: 'q' },
+    { id: 60, x: 5, y: 8, piece: 'k' },
     { id: 61, x: 6, y: 8, piece: 'b' },
     { id: 62, x: 7, y: 8, piece: 'n' },
     { id: 63, x: 8, y: 8, piece: 'r' }
@@ -72,8 +72,8 @@ const fieldsE2 = [
     { id: 0, x: 1, y: 1, piece: '' },
     { id: 1, x: 2, y: 1, piece: 'N' },
     { id: 2, x: 3, y: 1, piece: 'B' },
-    { id: 3, x: 4, y: 1, piece: 'K' },
-    { id: 4, x: 5, y: 1, piece: 'Q' },
+    { id: 3, x: 4, y: 1, piece: 'Q' },
+    { id: 4, x: 5, y: 1, piece: 'K' },
     { id: 5, x: 6, y: 1, piece: 'B' },
     { id: 6, x: 7, y: 1, piece: 'N' },
     { id: 7, x: 8, y: 1, piece: 'R' },
@@ -128,8 +128,8 @@ const fieldsE2 = [
     { id: 56, x: 1, y: 8, piece: '' },
     { id: 57, x: 2, y: 8, piece: 'n' },
     { id: 58, x: 3, y: 8, piece: 'b' },
-    { id: 59, x: 4, y: 8, piece: 'k' },
-    { id: 60, x: 5, y: 8, piece: 'q' },
+    { id: 59, x: 4, y: 8, piece: 'q' },
+    { id: 60, x: 5, y: 8, piece: 'k' },
     { id: 61, x: 6, y: 8, piece: 'b' },
     { id: 62, x: 7, y: 8, piece: '' },
     { id: 63, x: 8, y: 8, piece: 'r' }
@@ -140,9 +140,9 @@ test('Are there a function for FEN to Array', () => {
 });
 
 test('Test FEN to Array function', () => {
-    expect(fenToArray('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR')).toEqual(fieldsE1.reverse());
+    expect(fenToArray('1nbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/1NBQKBNR')).toEqual(fieldsE1);
 });
 
 test('Test FEN to Array function', () => {
-    expect(fenToArray('r1bqkbn1/pp1ppppr/8/8/8/2p5/RPPPPP1P/RNBQKBN1')).toEqual(fieldsE2.reverse());
+    expect(fenToArray('1nbqkb1r/rpppp1pp/8/8/8/5p2/P1PPPPPR/1NBQKBNR')).toEqual(fieldsE2);
 });

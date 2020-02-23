@@ -2,13 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row-reverse;
     width: 300px;
     height: 300px;
 }
 
 .flexChild {
     box-sizing: border-box;
-    background-color: #e2b87e;
+    background-color: #8f5736;
     flex: 0 0 12.5%;
     border: 1px solid white;
     font-size: 1.5rem;
@@ -26,5 +27,5 @@
 .flexChild:nth-child(40) ~ .flexChild:nth-child(-2n+47),
 .flexChild:nth-child(48) ~ .flexChild:nth-child(-2n+56),
 .flexChild:nth-child(56) ~ .flexChild:nth-child(-2n+63) {
-    background-color: #8f5736;
+    background-color: #e2b87e;
 }

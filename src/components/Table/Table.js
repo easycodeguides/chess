@@ -5,11 +5,11 @@ import './Table.css';
 class Table extends React.Component {
     state = {
         fields: [
-            { id: 0, x: 1, y: 1, piece: 'R' },
+            { id: 0, x: 1, y: 1, piece: '' },
             { id: 1, x: 2, y: 1, piece: 'N' },
             { id: 2, x: 3, y: 1, piece: 'B' },
-            { id: 3, x: 4, y: 1, piece: 'K' },
-            { id: 4, x: 5, y: 1, piece: 'Q' },
+            { id: 3, x: 4, y: 1, piece: 'Q' },
+            { id: 4, x: 5, y: 1, piece: 'K' },
             { id: 5, x: 6, y: 1, piece: 'B' },
             { id: 6, x: 7, y: 1, piece: 'N' },
             { id: 7, x: 8, y: 1, piece: 'R' },
@@ -61,11 +61,11 @@ class Table extends React.Component {
             { id: 53, x: 6, y: 7, piece: 'p' },
             { id: 54, x: 7, y: 7, piece: 'p' },
             { id: 55, x: 8, y: 7, piece: 'p' },
-            { id: 56, x: 1, y: 8, piece: 'r' },
+            { id: 56, x: 1, y: 8, piece: '' },
             { id: 57, x: 2, y: 8, piece: 'n' },
             { id: 58, x: 3, y: 8, piece: 'b' },
-            { id: 59, x: 4, y: 8, piece: 'k' },
-            { id: 60, x: 5, y: 8, piece: 'q' },
+            { id: 59, x: 4, y: 8, piece: 'q' },
+            { id: 60, x: 5, y: 8, piece: 'k' },
             { id: 61, x: 6, y: 8, piece: 'b' },
             { id: 62, x: 7, y: 8, piece: 'n' },
             { id: 63, x: 8, y: 8, piece: 'r' }
