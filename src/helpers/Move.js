@@ -113,6 +113,20 @@ export const move = (move, position) => {
                 let newColumnFields = fields.filter(field => field.column === moveColumn);
                 let newPosition = newColumnFields.filter(field => field.row === Number(moveRow));
                 newPosition[0].piece = 'N';
+            } else if(piece === 'B'){
+               
+                let fourBlocks = fields.filter(field => ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex < columnInd && field.row > Number(moveRow) && (field.columnIndex - columnInd) === (Number(moveRow) - field.row)))
+                                                        || ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex > columnInd && field.row > Number(moveRow) && (field.columnIndex - columnInd) === (field.row - Number(moveRow))))
+                                                        || ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex < columnInd && field.row < Number(moveRow) && (columnInd - field.columnIndex) === (Number(moveRow) - field.row)))
+                                                        || ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex > columnInd && field.row < Number(moveRow) && (field.columnIndex - columnInd) === (Number(moveRow) - field.row))));
+                let startBishopPosition = fourBlocks.filter(field => field.piece === 'B');
+                startBishopPosition[0].piece = '';
+                let newBishopPos = fields.filter(field => field.columnIndex === columnInd && field.row === Number(moveRow));
+                newBishopPos[0].piece = 'B';
             }
         } else {
             if(piece === 'q') {              
@@ -149,9 +163,21 @@ export const move = (move, position) => {
                 let newColumnFields = fields.filter(field => field.column === moveColumn);
                 let newPosition = newColumnFields.filter(field => field.row === Number(moveRow));
                 newPosition[0].piece = 'n';
+            } else if(piece === 'b'){
+                let fourBlocks = fields.filter(field => ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex > columnInd && field.row < Number(moveRow) && (field.columnIndex - columnInd) === (Number(moveRow) - field.row)))
+                                                        || ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex < columnInd && field.row < Number(moveRow) && (columnInd - field.columnIndex) === (Number(moveRow) - field.row)))
+                                                        || ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex > columnInd && field.row > Number(moveRow) && (field.columnIndex - columnInd) === (field.row - Number(moveRow))))
+                                                        || ((field.columnIndex !== columnInd && field.row !== Number(moveRow))
+                                                            && (field.columnIndex < columnInd && field.row > Number(moveRow) && (columnInd - field.columnIndex) === (field.row - Number(moveRow)))));
+                let startBishopPosition = fourBlocks.filter(field => field.piece === 'b');
+                startBishopPosition[0].piece = '';
+                let newBishopPos = fields.filter(field => field.columnIndex === columnInd && field.row === Number(moveRow));
+                newBishopPos[0].piece = 'b';
             }
         }
-        
     }
     changePlayer();
     
