@@ -12,7 +12,7 @@ export const validMove = (position, fields) => {
     };
 
     // Data je fiksna startna pozicija
-    const figureStartPosition = {x: 8, y: 1};
+    const figureStartPosition = {x: 8, y: 8};
 
     // TODO Ubaciti logiku da li jede ili ne, ovde prebaciti da li je polje zauzeto ili ne.
 
@@ -22,7 +22,7 @@ export const validMove = (position, fields) => {
         position.piece !== '');
 
     const figureColor = figureLetter => figureLetter === figureLetter.toUpperCase() ? 'white':'black';
-    
+
     if (movingFigure === 'r' || movingFigure === 'R') {
         return validRockMove(figureStartPosition, figureEndPosition, fields);
     }
