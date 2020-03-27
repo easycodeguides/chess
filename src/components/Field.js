@@ -1,9 +1,12 @@
 import React from 'react';
 import {fenToArray} from '../helpers/FenToArray'
 import { arrayToFen } from "../helpers/ArrayToFen";
+import { move } from "../helpers/Move";
 
 // FEN primer
 const fen = '3k3r/8/8/8/8/8/8/3K1N2';
+
+//const pos2 = 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR';
 
 class Field extends React.Component {
     getStyle = (piece) => {
